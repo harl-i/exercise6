@@ -19,18 +19,20 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator Spawn()
     {
-        int i = 0;
+        var delay = new WaitForSeconds(2);
+        int index = 0;
+
         while (true)
         {
-            Instantiate(_enemy, _spawnPoints[i].transform);
-            i++;
+            Instantiate(_enemy, _spawnPoints[index].transform);
+            index++;
 
-            if (i == _spawnPoints.Length)
+            if (index == _spawnPoints.Length)
             {
-                i = 0;
+                index = 0;
             }
 
-            yield return new WaitForSeconds(2);
+            yield return delay;
         }  
     }
 }

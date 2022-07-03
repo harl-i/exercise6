@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkToPlayer : MonoBehaviour
+public class PursuerPlayer : MonoBehaviour
 {
     private Player _player;
     private float _moveSpeed = 4f;
